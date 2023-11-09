@@ -3,7 +3,13 @@
 import React, { useState } from 'react'
 import { useServerInsertedHTML } from 'next/navigation'
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
- 
+
+/**
+ * Styled components SSR config
+ * 
+ * @param param children react.fc
+ * @returns jsx
+ */
 export default function StyledComponentsRegistry({
   children,
 }: {

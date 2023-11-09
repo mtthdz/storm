@@ -4,7 +4,13 @@ import { ThemeProvider } from 'styled-components';
 import StyledComponentsRegistry from './_lib/styledComponentsRegistry';
 import theme from './_styles/theme';
 
-const Providers = (props: React.PropsWithChildren) => {
+/**
+ * Dedicated Providers wrapper for app/page.tsx
+ * 
+ * @param props children components
+ * @returns JSX
+ */
+export default function Providers (props: React.PropsWithChildren) {
   return (
     <StyledComponentsRegistry>
       <ThemeProvider theme={theme}>
@@ -13,5 +19,3 @@ const Providers = (props: React.PropsWithChildren) => {
     </StyledComponentsRegistry>
   );
 };
-
-export default Providers
