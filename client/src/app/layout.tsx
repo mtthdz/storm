@@ -20,7 +20,9 @@ export default function RootLayout({
       <body>
         <Providers>
           <GlobalStyles />
-          {children}
+          <div className="wrapper">
+            {children}
+          </div>
         </Providers>
       </body>
     </html>
