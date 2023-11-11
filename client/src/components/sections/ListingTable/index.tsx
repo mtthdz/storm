@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import downChevron from '../../assets/down.svg';
+import { useContext } from 'react';
+import { FeedContext } from '@/context/FeedContext';
 
 /**
  * Listing Table component
@@ -13,6 +15,8 @@ import downChevron from '../../assets/down.svg';
  * @returns JSX
  */
 export default function ListingTable () {
+  const { setModalVisible } = useContext(FeedContext);
+
   return (
     <>
       <div className="table-metadata">
@@ -38,7 +42,7 @@ export default function ListingTable () {
             <span className="status-flag">Status</span>
           </div>
           <div className="table-column column-quantity">112</div>
-          <button className="table-column column-name">
+          <button className="table-column column-name" onClick={() => setModalVisible(true)}>
             <p className="cell-content-text">Macbook Pro 16 inch (2020 ) For Sale</p>
             <p className="cell-content-metadata">
               <span className="metadata">BA9212320</span>
