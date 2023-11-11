@@ -1,8 +1,8 @@
 'use client';
 
 import { ThemeProvider } from 'styled-components';
-import StyledComponentsRegistry from './_lib/styledComponentsRegistry';
-import theme from './_styles/theme';
+import StyledComponentsRegistry from '../lib/styledComponentsRegistry';
+import theme from '../styles/theme';
 
 /**
  * Dedicated Providers wrapper for app/page.tsx

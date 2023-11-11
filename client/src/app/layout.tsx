@@ -1,6 +1,6 @@
 'use client'
 
-import GlobalStyles from "./_styles/GlobalStyles"
+import GlobalStyles from "../styles/GlobalStyles"
 import Providers from "./Providers"
 
 /**

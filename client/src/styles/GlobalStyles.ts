@@ -10,6 +10,9 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.0rem;
   }
+  h1 {
+    font-size: 1.6rem;
+  }
 
   // global wrapper
   .wrapper {
