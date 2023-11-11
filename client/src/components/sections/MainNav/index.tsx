@@ -20,24 +20,24 @@ export default function MainNav () {
       <ul className="nav-list">
         <li className="nav-item">
           <a href="#" className="nav-link">
-            <Image src={settingsIcon} alt="settings link" className="nav-icon" />
+            <Image src={settingsIcon} width={40} height={40} alt="settings link" className="nav-icon" />
           </a>
         </li>
         <li className="nav-item">
           <a href="#" className="nav-link">
-            <Image src={notificationsIcon} alt="notifications link" className="nav-icon" />
+            <Image src={notificationsIcon} width={40} height={40} alt="notifications link" className="nav-icon" />
           </a>
         </li>
         <li className="nav-item">
           <a href="#" className="nav-link item-user">
-            <Image src={userIcon} alt="user link" className="nav-icon" />
+            <Image src={userIcon} width={40} height={40} alt="user link" className="nav-icon" />
             <p>Adriana Arias</p>
           </a>
         </li>
       </ul>
 
       <button className='nav-toggle'>
-        <Image src={menuIcon} alt="nav expand" />
+        <Image src={menuIcon} width={24} height={24} alt="nav expand" />
       </button>
     </StyledNav>
   )
