@@ -1,9 +1,11 @@
 import express, { NextFunction, Request, Response } from 'express';
 import productRoutes from './routes/productRoutes';
+import cors from 'cors';
 
 const app = express();
 const port = 8000;
 
+app.use(cors()); 
 app.listen(port, () => {
   console.log(`storm server is running on port ${port}.`);
 });
