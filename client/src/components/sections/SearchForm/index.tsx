@@ -3,6 +3,16 @@ import { useState } from "react"
 import searchIcon from '../../assets/search.svg'
 import { FormStyles } from "./SearchForm.styles";
 
+/**
+ * Search Form component
+ * 
+ * TODO: handleSubmit function
+ * 
+ * An extra div.input-container is used to float
+ * the search icon SVG into the input element
+ * 
+ * @returns JSX
+ */
 export default function SearchForm () {
   const [searchQuery, setSearchQuery] = useState('');
 

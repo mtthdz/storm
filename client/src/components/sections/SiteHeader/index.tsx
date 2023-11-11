@@ -7,9 +7,11 @@ import { StyledHeader } from './SiteHeader.styles';
 
 /**
  * Site Header component
+ * 
+ * TODO: align .flex-search closer to .flex-nav
  *
  * The wireframe dictates a dynamic flex layout for mobile
- * responsiveness.
+ * responsiveness, where the child order is mixed up.
  *
  * Each child component in SiteHeader will have a flex
  * container to organize flex relationships within this

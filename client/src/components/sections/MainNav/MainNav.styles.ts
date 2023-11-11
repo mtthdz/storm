@@ -44,13 +44,14 @@ export const StyledNav = styled.nav`
     color: #DCDFE3;
   }
 
-  @media (max-width: 925px) {
+  @media (max-width: 900px) {
     .nav-list {
       display: none;
     }
 
     .nav-toggle {
-      display: block;
+      display: flex;
+      align-items: center;
     }
   }
 `;

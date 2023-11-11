@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const StyledHeader = styled.section`
+export const StyledHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 60px auto 120px;
+  margin: 80px auto 120px;
 
   .flex-child {
     flex: 1;
@@ -24,13 +24,16 @@ export const StyledHeader = styled.section`
     order: 3;
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 700px) {
+    margin-top: 40px;
+
     .flex-nav {
       order: 2;
     }
     .flex-search {
       order: 3;
       flex-basis: 100%;
+      margin-top: 20px;
     }
   }
 `;

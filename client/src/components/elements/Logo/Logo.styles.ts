@@ -8,6 +8,7 @@ export const StyledLogo = styled.div`
   flex-shrink: 0;
   width: 209.536px;
   height: 43.995px;
+  margin-right: 40px;
 
   .storm-logo {
     width: 46.631px;
