@@ -1,15 +1,25 @@
 import { ProductType } from "@/types/ProductType"
 
-export const getProducts = async () => {
+/**
+ * This API call gets all product data at /products.
+ * 
+ * @returns ProductType[] || error
+ */
+export const getProducts = async (): Promise<ProductType[] | Error> => {
   try {
     let res = await fetch('http://localhost:8000/products', {
       method: 'get',
     });
 
-    let data = await res.json(); // Convert the response body to JSON
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.message || 'Fetch failed');
+    }
+    
+    let data = await res.json();
+    return data as ProductType[];
 
-    console.log(data); // Log the JSON data
   } catch (error) {
-    console.log(error);
+    throw new Error((error as Error).message);
   }
 }
