@@ -10,13 +10,13 @@ import { ModalStyles } from './Modal.styles';
 /**
  * Modal component
  * 
- * TODO: make content variable via context
+ * TODO: make content variable via context>selectedItem
  * TODO: refactor classNames
  * 
  * @returns JSX
  */
 export default function Modal () {
-  const { modalVisible, setModalVisible } = useContext(FeedContext);
+  const { modalVisible, setModalVisible, selectedItem } = useContext(FeedContext);
 
   if (!modalVisible) return null;
 

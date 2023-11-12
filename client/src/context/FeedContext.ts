@@ -1,16 +1,5 @@
-import { ProductType } from "@/types/ProductType";
-import { Dispatch, SetStateAction, createContext } from "react";
-
-type FeedContextProps = {
-  user: null | string;
-  modalVisible: null | boolean;
-  feedData: null | ProductType[];
-  selectedItem: null | ProductType;
-  setUser: Dispatch<SetStateAction<string>>;
-  setModalVisible: Dispatch<SetStateAction<boolean>>;
-  setFeedData: Dispatch<SetStateAction<ProductType[]>>;
-  setSelectedItem: Dispatch<SetStateAction<ProductType | null>>;
-};
+import { createContext } from "react";
+import { FeedContextProps } from "@/types/FeedContext";
 
 export const FeedContext = createContext<FeedContextProps>({
   user: 'Adriana Arias',

@@ -1,3 +1,4 @@
+// TODO: create theme based on wireframe
 const theme = {
   colors: {
     white: '#ffffff',

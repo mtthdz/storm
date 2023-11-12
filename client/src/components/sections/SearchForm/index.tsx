@@ -32,7 +32,6 @@ export default function SearchForm () {
    * Response returned here is saved in context (feed/page.tsx).
    * We check for an empty array in the event that a user wants to clear
    * their text input to return the (original) entire product list.
-   *
    * 
    * @param event
    */

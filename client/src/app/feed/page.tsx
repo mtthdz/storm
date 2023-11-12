@@ -19,8 +19,7 @@ import { ProductType } from "@/types/ProductType";
  * I typically store global data (such as user) into a redux store,
  * but have set a fixed instance of the user object here due to
  * time constraints.
- * 
- * 
+ *
  * @returns JSX
  */
 export default function Feed() {

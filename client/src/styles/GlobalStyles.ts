@@ -1,5 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 
+// TODO: create actual meaningful global styles based on wireframe
 const GlobalStyles = createGlobalStyle`
   // reset styles
   html {
