@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const TableStyles = styled.section`
   border: 1px solid var(--Border, #E4E4EF);
   border-radius: 8px;
+  margin-bottom: 80px;
 
   .table-header,
   .table-row {
@@ -43,7 +44,11 @@ export const TableStyles = styled.section`
       cursor: pointer;
     }
     .column-price {
+      justify-content: flex-end;
       border-left: 2px solid #E4E4EF;
+    }
+    .column-price .cell-content-text {
+      margin-right: 60px;
     }
     .cell-content-metadata {
       font-size: 12px;
@@ -122,5 +127,21 @@ export const TableStyles = styled.section`
         display: inline;
       }
     }
+  }
+`;
+
+export const StyledTableHeader = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 10px;
+
+  h4 {
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: var(--text-secondary, #808080);
   }
 `;
