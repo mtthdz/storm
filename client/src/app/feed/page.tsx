@@ -27,10 +27,24 @@ export default function Feed() {
   const [user, setUser] = useState('Adriana Arias')
   const [modalVisible, setModalVisible] = useState(false);
   const [feedData, setFeedData] = useState<ProductType[]>([]);
-  const [selectedItem, setSelectedItem] = useState<ProductType>(null);
+  const [selectedItem, setSelectedItem] = useState<ProductType | null>(null);
 
   useEffect(() => {
-    getProducts();
+    const fetchData = async () => {
+      try {
+        const data = await getProducts();
+
+        if (data instanceof Error) {
+          console.error('Error fetching data:', data.message);
+        } else {
+          setFeedData(data);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
   }, [])
 
   return (
