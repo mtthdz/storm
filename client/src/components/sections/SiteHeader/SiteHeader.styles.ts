@@ -6,7 +6,7 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 80px auto 120px;
+  margin: 60px auto 80px;
 
   .flex-child {
     flex: 1;

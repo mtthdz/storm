@@ -9,7 +9,7 @@ type FeedContextProps = {
   setUser: Dispatch<SetStateAction<string>>;
   setModalVisible: Dispatch<SetStateAction<boolean>>;
   setFeedData: Dispatch<SetStateAction<ProductType[]>>;
-  setSelectedItem: Dispatch<SetStateAction<ProductType>>;
+  setSelectedItem: Dispatch<SetStateAction<ProductType | null>>;
 };
 
 export const FeedContext = createContext<FeedContextProps>({

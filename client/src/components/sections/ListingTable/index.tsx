@@ -2,27 +2,29 @@
 
 import Image from 'next/image';
 import downChevron from '../../assets/down.svg';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { FeedContext } from '@/context/FeedContext';
-import { TableStyles } from './ListingTable.styles';
+import { StyledTableHeader, TableStyles } from './ListingTable.styles';
 
 /**
  * Listing Table component
  * 
- * TODO: make dynamic
  * TODO: split up into individual components
+ * TODO: make dynamic status flag (add to api data)
+ * TODO: set selected item for modal via context api
  * 
  * @returns JSX
  */
 export default function ListingTable () {
-  const { setModalVisible } = useContext(FeedContext);
+  const { feedData, setModalVisible, setSelectedItem } = useContext(FeedContext);
+  const dataCount = feedData?.length;
 
   return (
     <>
-      <div className="table-metadata">
+      <StyledTableHeader>
         <h4>Products</h4>
-        <p>10 of 64 results</p>
-      </div>
+        <p>{dataCount} of 64 results</p>
+      </StyledTableHeader>
 
       <TableStyles className="table">
         <div className="table-header">
@@ -36,21 +38,25 @@ export default function ListingTable () {
           </div>
         </div>
 
-        <div className="table-row">
-          <div className="table-column column-id">1374</div>
-          <div className="table-column column-status">
-            <span className="status-flag">Status</span>
-          </div>
-          <div className="table-column column-quantity">112</div>
-          <button className="table-column column-name" onClick={() => setModalVisible(true)}>
-            <p className="cell-content-text">Macbook Pro 16 inch (2020 ) For Sale</p>
-            <p className="cell-content-metadata">
-              <span className="metadata">BA9212320</span>
-              <span className="metadata-mobile"> - Qty: 245</span>
-            </p>
-          </button>
-          <div className="table-column column-price">$854.08</div>
-        </div>
+        {feedData?.map((item, index) => {
+          return (
+            <div className="table-row" key={index}>
+              <div className="table-column column-id">{item.id}</div>
+              <div className="table-column column-status">
+                <span className="status-flag">Status</span>
+              </div>
+              <div className="table-column column-quantity">{item.quantity}</div>
+              <button className="table-column column-name" onClick={() => setModalVisible(true)}>
+                <p className="cell-content-text">{item.product}</p>
+                <p className="cell-content-metadata">
+                  <span className="metadata">{item.serial}</span>
+                  <span className="metadata-mobile"> - Qty: {item.quantity}</span>
+                </p>
+              </button>
+              <div className="table-column column-price">${item.total}</div>
+            </div>
+          )
+        })}
       </TableStyles>
     </>
   )
